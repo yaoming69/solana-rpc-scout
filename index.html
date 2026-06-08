@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solana RPC Scout</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Solana developer utility</p>
+          <h1>RPC Scout</h1>
+        </div>
+        <button id="runScan" class="primary-button" type="button">Run Scan</button>
+      </section>
+
+      <section class="summary-grid" aria-label="scan summary">
+        <article>
+          <span id="healthyCount">0</span>
+          <p>healthy endpoints</p>
+        </article>
+        <article>
+          <span id="medianLatency">-</span>
+          <p>median latency</p>
+        </article>
+        <article>
+          <span id="bestEndpoint">-</span>
+          <p>best endpoint</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Endpoints</h2>
+          <p>Measures health, slot freshness, and round-trip time with Solana JSON-RPC.</p>
+        </div>
+        <div class="endpoint-list" id="endpointList"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Custom Endpoint</h2>
+          <p>Add an RPC URL to compare your own provider without sending wallet data.</p>
+        </div>
+        <form id="endpointForm" class="endpoint-form">
+          <input
+            id="endpointName"
+            name="endpointName"
+            autocomplete="off"
+            placeholder="Name"
+            aria-label="Endpoint name"
+          />
+          <input
+            id="endpointUrl"
+            name="endpointUrl"
+            autocomplete="off"
+            placeholder="https://api.mainnet-beta.solana.com"
+            aria-label="Endpoint URL"
+            required
+          />
+          <button type="submit">Add</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Export</h2>
+          <p>Copy a compact report for grant updates, bounty submissions, or issue comments.</p>
+        </div>
+        <textarea id="reportOutput" readonly aria-label="scan report"></textarea>
+        <button id="copyReport" type="button">Copy Report</button>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

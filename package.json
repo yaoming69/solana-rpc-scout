@@ -1,0 +1,17 @@
+{
+  "name": "solana-rpc-scout",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser UI and local proxy for comparing Solana RPC endpoint health and latency.",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js"
+  },
+  "keywords": [
+    "solana",
+    "rpc",
+    "latency",
+    "developer-tools"
+  ],
+  "license": "MIT"
+}
