@@ -36,7 +36,7 @@ It supports mainnet-beta, devnet, testnet, and custom HTTPS RPC URLs.
 ## What I Will Ship
 
 - Static web MVP
-- Public GitHub repository
+- Public GitHub repository: https://github.com/yaoming69/solana-rpc-scout
 - README with setup instructions
 - Exportable Markdown benchmark report
 - Short demo video or screenshots showing live scans against Solana RPC endpoints
@@ -61,4 +61,10 @@ quickly but practical enough to become useful developer tooling.
 
 ## Current Status
 
-MVP files are created locally and ready to run from `D:\36\solana_rpc_scout`.
+The MVP has been built and published:
+
+- Repository: https://github.com/yaoming69/solana-rpc-scout
+- Local demo command: `node .\server.js`
+- Local demo URL: `http://localhost:4173`
+
+The tool already supports default Solana Labs endpoints, custom HTTPS RPC endpoints, local JSON-RPC proxying, and Markdown report export.
